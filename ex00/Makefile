@@ -1,4 +1,4 @@
-srcs= main.cpp ScalarConverter.cpp
+srcs= main.cpp ScalarConverter.cpp pseudos.cpp
 
 header= ScalarConverter.hpp
 
@@ -12,4 +12,8 @@ $(Name) : $(srcs) $(header)
 clean:
 	rm -rf $(Name)
 
+fclean: clean
+
 re:clean all
+
+.Phony: re all clean fclean

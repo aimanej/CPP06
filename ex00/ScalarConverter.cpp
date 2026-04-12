@@ -59,6 +59,8 @@ void display_double(std::string input, int preci)
 	std::cout << std::fixed << std::setprecision(preci) << "double: " << num << std::endl;
 }
 
+
+
 int digits_handler(std::string input)
 {
 	int dots = 0;
@@ -74,12 +76,13 @@ int digits_handler(std::string input)
 			efs++;
 		if (!isdigit(input[i]) && input[i] != 'f' && input[i] != '.')
 		{
-			std::cout << "result  " << !isdigit(input[i]) << " tried <<   " << input[i] << std::endl;
+			pseudo_func(input);
 			std::cout << "input format not accepted 1" << std::endl;
 			exit(0);
 		}
 		if(dots && isdigit(input[i]))
 			ad++;
+		
 	}
 	std::cout << "precision points : " << ad << std::endl;
 	if (dots > 1 || efs > 1)
