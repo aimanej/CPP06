@@ -7,6 +7,7 @@
 #include <cctype>
 #include <limits>
 #include <cmath>
+#include <cstdlib>
 
 class ScalarConverter
 {
@@ -26,6 +27,6 @@ void display_int(std::string input);
 void display_float(std::string input, int preci);
 void display_double(std::string input, int preci);
 void pseudo_func(std::string input);
-int digits_handler(std::string input);
+void digits_handler(std::string input);
 
 #endif
